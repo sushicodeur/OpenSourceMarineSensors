@@ -200,6 +200,7 @@ void sendUDPPacket(const char* packet, IPAddress remoteIp, int remotePort) {
 
   if (UDP.beginPacket(remoteIp, remotePort)) {
     UDP.write(packet);
+    UDP.endPacket();
   }
 }
 ```
